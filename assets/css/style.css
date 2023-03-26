@@ -1,0 +1,279 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Sarpanch:wght@400;600;800;900&display=swap");
+
+/* Variabel CSS */
+:root {
+  --header-height: 102px;
+
+  /* Color */
+  --orange: #fd7022;
+  --orange-darker: #f9591e;
+  --paragraph-color: #e7e7e7;
+  --name-color: #7a7a7a;
+  --putih: #ffffff;
+  --card-bg: rgba(217, 217, 217, 8%);
+
+  /* Font and typography*/
+  --main-font: "Sarpanch", sans-serif;
+  --secondary-font: "Lexend", sans-serif;
+  --h1-font-size: 48px;
+  --h2-font-size: 36px;
+  --p-font-size: 14px;
+
+  /* Font Weight */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-extra-bold: 800;
+  --font-black: 900;
+
+  /* Z-index */
+  --z-header: 1000;
+}
+
+/* reset HTML */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #111010;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  font-family: var(--main-font);
+  color: var(--putih);
+}
+
+p {
+  font-family: var(--secondary-font);
+}
+
+/* reusable CSS */
+.container {
+  max-width: 1140px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 36px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-header);
+  transition: 0.4s;
+  background: rgba(18, 17, 17, 80%);
+  backdrop-filter: blur(10px);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  padding: 12px 32px;
+  color: var(--putih);
+  border-radius: 0px 20px;
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.btn-main {
+  background: linear-gradient(0deg, var(--orange), var(--orange-darker));
+}
+
+.btn-secondary {
+  border: 1px solid var(--orange);
+}
+
+/* Header */
+.nav__list {
+  display: flex;
+  gap: 26px;
+}
+
+.nav__item {
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  font-weight: var(--font-regular);
+}
+
+.nav__link {
+  color: var(--putih);
+  transition: 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--orange);
+}
+
+.active-link {
+  color: var(--orange);
+}
+
+.btn-header {
+  padding: 10px 24px;
+  transition: 0.4s;
+}
+
+.btn-header:hover {
+  background: var(--orange);
+}
+
+/* Hero */
+
+.hero__container {
+  padding: 62px 0 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 48px;
+  max-width: 387px;
+  margin-bottom: 24px;
+  line-height: 130%;
+}
+
+.hero__desc {
+  font-size: 15px;
+  color: var(--paragraph-color);
+  line-height: 150%;
+  margin-bottom: 48px;
+  max-width: 387px;
+}
+
+.btn-hero1 {
+  margin-right: 20px;
+}
+
+.hero__img {
+  margin-bottom: 32px;
+}
+
+.hero__details {
+  display: flex;
+  gap: 50px;
+}
+
+.hero__data-number {
+  font-size: 32px;
+  font-family: var(--main-font);
+  font-weight: var(--font-semi-bold);
+  color: var(--putih);
+}
+
+.hero__data-desc {
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  color: var(--paragraph-color);
+  font-weight: var(--font-regular);
+}
+
+/* Favorites */
+.favorites__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorites__card {
+  width: 360px;
+  padding: 20px 20px 46px 20px;
+  border-radius: 20px;
+  background-color: var(--card-bg);
+  transition: 0.4s;
+}
+
+.favorites__card:hover {
+  border: 1px solid var(--orange);
+  transform: translateY(-5px);
+}
+
+.favorites__card-img {
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.favorites__card-name {
+  font-size: 18px;
+  font-family: var(--secondary-font);
+  color: var(--putih);
+  margin-bottom: 12px;
+}
+
+.favorites__card-item-profile {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.favorites__card-item-profile-photo {
+  width: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.favorites__card-item-profile-author {
+  color: var(--name-color);
+  font-family: var(--secondary-font);
+}
+
+.favorites__card-btn-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn-card-main {
+  display: flex;
+  width: 50%;
+  margin-right: 0px;
+  justify-content: center;
+}
+
+.btn-card-secondary {
+  display: flex;
+  width: 42%;
+  justify-content: center;
+  margin: 0px;
+}
